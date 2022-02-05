@@ -3,18 +3,18 @@ img = "";
 objects = [];
 
 function preload() {
-    img = loadImage("Bedroom.jpg")
+    img = loadImage("Globe.jpg")
 }
 
 function setup() {
-    canvas = createCanvas(640,480);
+    canvas = createCanvas(600,600);
     canvas.center();
     objectDetector = ml5.objectDetector('cocossd', modelLoaded);
     document.getElementById("status").innerHTML = "Status: Detecting Objects";
 }
 
 function draw() {
-    image(img, 0, 0, 640, 480);
+    image(img, 0, 0, 600, 600);
 
     if (status != "") {
         for (i = 0; i < objects.length; i++) {
